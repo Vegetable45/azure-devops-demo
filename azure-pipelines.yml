@@ -1,0 +1,12 @@
+# azure-pipelines.yml
+trigger:
+  - main  # or "master" if your branch is named that
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: echo "✅ Hello from your first Azure DevOps Pipeline!"
